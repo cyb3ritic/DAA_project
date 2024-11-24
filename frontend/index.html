@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Hospital Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Advanced Hospital Scheduler</h1>
+
+    <div class="form-container">
+        <h2>Add Patient</h2>
+        <form id="patientForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required />
+
+            <label for="arrivalTime">Arrival Time:</label>
+            <input type="number" id="arrivalTime" required />
+
+            <label for="duration">Treatment Duration:</label>
+            <input type="number" id="duration" required />
+
+            <label for="priority">Priority (1=Normal, 2=Urgent, 3=Emergency):</label>
+            <input type="number" id="priority" required />
+
+            <button type="submit">Add Patient</button>
+        </form>
+    </div>
+
+    <div class="patients-container">
+        <h2>Added Patients</h2>
+        <ul id="patientsList"></ul>
+    </div>
+
+    <div class="results-container">
+        <h2>Schedule</h2>
+        <table id="scheduleTable">
+            <thead>
+                <tr>
+                    <th>Patient</th>
+                    <th>Doctor</th>
+                    <th>Room</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>Report</h2>
+        <pre id="reportOutput"></pre>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
