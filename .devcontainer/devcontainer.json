@@ -1,0 +1,20 @@
+{
+    "name": "JavaScript App Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:14",
+    "forwardPorts": [
+      3000
+    ],
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "javascript.validate.enable": true,
+          "eslint.enable": true
+        },
+        "extensions": [
+          "esbenp.prettier-vscode",
+          "dbaeumer.vscode-eslint"
+        ]
+      }
+    },
+    "postCreateCommand": "npm install"
+  }
